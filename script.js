@@ -1,4 +1,4 @@
-const startDate = new Date(2019, 10, 1);
+const startDate = new Date(2019, 10, 7);
 
 const today = new Date();
 

@@ -61,7 +61,7 @@ body {
 
     color: #4a6fa5;
 
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 
     font-weight: 700;
 
@@ -73,9 +73,10 @@ font-size:64px;
 
 font-weight:700;
 
-margin-bottom:20px;
+margin-bottom:12px;
 
-line-height:1.1;
+line-height:1.05;
+
 }
 
 .hero-text h2 {

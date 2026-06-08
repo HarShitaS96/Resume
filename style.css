@@ -12,13 +12,16 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
     background:
-         radial-gradient(circle at top left, #dbeafe 0%, transparent 35%),
-         radial-gradient(circle at bottom right, #e9d5ff 0%, transparent 35%),
-         linear-gradient(135deg, #fffdf8 ,#f8fafc);
+         radial-gradient(circle at 10% 10%, rgba(173,216,230,.45), transparent 35%),
+         radial-gradient(circle at 90% 20%, rgba(221,214,254,.35), transparent 30%),
+         radial-gradient(circle at 20% 90%, rgba(254,226,226,.30), transparent 30%),
+         linear-gradient(135deg, #fafcff ,#f8fafc,#fffdfb);
 
     color:#222;
 
     overflow-x:hidden;
+
+    background-attachment: fixed; 
 }
 
 /* HERO SECTION */

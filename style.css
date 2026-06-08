@@ -52,11 +52,19 @@ body {
 }
 
 .hero-text h3 {
-    font-size: 24px;
 
-    margin-bottom: 15px;
+    font-size: 14px;
 
-    color: #666;
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #4a6fa5;
+
+    margin-bottom: 20px;
+
+    font-weight: 600;
+
 }
 
 .hero-text h1{

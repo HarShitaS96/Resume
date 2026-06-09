@@ -433,4 +433,12 @@ html {
     .contact-card p, .contact-card a {
         font-size: 16px;
     }
+
+    /* Active state highlighting for the menu items */
+    
+    .navbar a.active {
+    background: #234a8b;
+    color: white !important; /* Forces the text to stay white when highlighted */
+    font-weight: 600;
+}
 }

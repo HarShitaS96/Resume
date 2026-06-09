@@ -388,6 +388,34 @@ section{
 .contact{
     padding:120px 10%;
 }
+
+
+.navbar a{
+
+text-decoration:none;
+
+color:#444;
+
+font-size:18px;
+
+transition:.3s;
+
+padding:8px 14px;
+
+border-radius:20px;
+
+}
+
+.navbar a:hover,
+.navbar a.active{
+
+background:#234a8b;
+
+color:white;
+
+}
+
+
 html{
     scroll-behavior:smooth;
 }

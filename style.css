@@ -271,7 +271,7 @@ margin:auto;
 
 .about h2{
 
-font-size:48px;
+font-size:52px;
 
  margin-bottom: 25px;
 
@@ -334,11 +334,11 @@ background:rgba(255,255,255,.75);
 
 backdrop-filter:blur(15px);
 
-padding:35px;
+padding:40px;
 
 border-radius:25px;
 
-margin-bottom:30px;
+margin-bottom:35px;
 
 box-shadow:
 0 10px 30px rgba(0,0,0,.08);
@@ -359,7 +359,7 @@ color:#234a8b;
 
 font-size:21px;
 
-line-height:1.8;
+line-height:1.9;
 
 color:#555;
 

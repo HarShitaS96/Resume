@@ -441,4 +441,9 @@ html {
     color: white !important; /* Forces the text to stay white when highlighted */
     font-weight: 600;
 }
+/* FORCE HIGHLIGHT STATE WHEN ACTIVE ON SCROLL */
+.navbar ul li a.active {
+    background: #234a8b !important;
+    color: #ffffff !important;
+    font-weight: 600;
 }

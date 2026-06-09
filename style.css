@@ -690,6 +690,100 @@ color:white;
 
 }
 
+/* BEYOND WORK */
+
+.beyond{
+
+padding:120px 10%;
+
+}
+
+.beyond-container{
+
+max-width:1000px;
+
+margin:auto;
+
+}
+
+.beyond h2{
+
+font-size:48px;
+
+margin-bottom:20px;
+
+}
+
+.beyond-intro{
+
+font-size:22px;
+
+line-height:1.8;
+
+color:#555;
+
+margin-bottom:50px;
+
+max-width:800px;
+
+}
+
+.beyond-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:30px;
+
+}
+
+.beyond-card{
+
+background:rgba(255,255,255,.8);
+
+backdrop-filter:blur(15px);
+
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.beyond-card:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+0 20px 40px rgba(0,0,0,.12);
+
+}
+
+.beyond-card h3{
+
+font-size:28px;
+
+margin-bottom:20px;
+
+color:#234a8b;
+
+}
+
+.beyond-card p{
+
+font-size:20px;
+
+line-height:1.8;
+
+color:#555;
+
+}
+
 /* CONTACT */
 
 .contact{

@@ -246,10 +246,8 @@ color:#000;
 
 /* ABOUT */
 
-.about{
-
-padding:100px 10%;
-
+.about {
+    max-width: 650px;
 }
 
 .about-container{
@@ -264,7 +262,7 @@ margin:auto;
 
 font-size:48px;
 
- margin-bottom: 30px;
+ margin-bottom: 25px;
 
 color:#222;
 
@@ -278,6 +276,8 @@ line-height: 1.8;
     
 margin-bottom: 20px;
 
+text-align: justify;
+    
 color:#555;
 
 }

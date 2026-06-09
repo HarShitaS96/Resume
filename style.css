@@ -206,7 +206,16 @@ align-items:center;
 
 padding:30px 10%;
 
-backdrop-filter: blur(10px);    
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+background:rgba(255,255,255,.7);
+
+backdrop-filter:blur(10px);
+
 }
 
 .logo{

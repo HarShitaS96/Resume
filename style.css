@@ -398,9 +398,12 @@ section{
 .about,
 .journey,
 .skills,
-.projects,
+.experience,
+.beyond,
 .contact{
-    padding:120px 10%;
+
+    padding:80px 10%;
+
 }
 
 

@@ -38,20 +38,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const observerOptions = {
         root: null,
-        rootMargin: "-30% 0px -60% 0px", // Triggers the highlight when a section hits the middle of your screen
-        threshold: 0
+        // Adjusted margins to trigger exactly when the heading/content hits the top 40% of the viewport
+        rootMargin: "-20% 0px -50% 0px", 
+        threshold: 0.1
     };
 
     const observer = new Intersection Observer((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                const id = entry.target.getAttribute("id");
+                const currentId = entry.target.getAttribute("id");
+                
+                // Debug tool: Right-click page -> Inspect -> Console to see this running live!
+                console.log("Currently reading section:", currentId);
                 
                 navLinks.forEach((link) => {
-                    const href = link.getAttribute("href");
+                    const href = link.getAttribute("href").replace("#", "");
                     
-                    // Checks if the link href matches the section ID exactly
-                    if (href === `#${id}`) {
+                    // Smart match check: matches exact ID or handles variations like "experience-section" vs "experience"
+                    if (href === currentId || 
+                        (currentId === "experience-section" && href === "experience") ||
+                        (currentId === "experience" && href === "experience-section") ||
+                        (currentId === "home" && href === "") ) {
+                        
                         link.classList.add("active");
                     } else {
                         link.classList.remove("active");

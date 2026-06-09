@@ -17,117 +17,6 @@ body {
     background-attachment: fixed; 
 }
 
-/* HERO SECTION */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 80px 10%;
-    gap: 100px;
-}
-
-/* LEFT SIDE */
-.hero-text {
-    flex: 1;
-}
-
-.hero-text h3 {
-    font-size: 24px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: #4a6fa5;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
-.hero-text h1 {
-    font-size: 64px;
-    font-weight: 700;
-    margin-bottom: 12px;
-    line-height: 1.05;
-}
-
-.hero-text h2 {
-    font-size: 30px;
-    font-weight: 400;
-    margin-bottom: 10px;
-}
-
-.hero-text p {
-    font-size: 20px;
-    margin-top: 25px;
-    color: #555;
-}
-
-/* JOURNEY CARD */
-.journey-card {
-    margin-top: 50px;
-    background: rgba(255,255,255,.8);
-    backdrop-filter: blur(15px);
-    padding: 40px;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
-    max-width: 380px;
-}
-
-.journey-card h3 {
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #4a6fa5;
-    margin-bottom: 20px;
-}
-
-.journey-card h2 {
-    font-size: 36px;
-    line-height: 1.3;
-    margin-bottom: 20px;
-    color: #222;
-}
-
-.journey-card p {
-    font-size: 18px;
-    color: #666;
-    font-style: italic;
-}
-
-.journey-card:hover {
-    transform: translateY(-5px);
-    transition: .4s;
-    box-shadow: 0 20px 40px rgba(0,0,0,.12);
-}
-
-/* RIGHT SIDE */
-.hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.hero-image img {
-    width: 450px;
-    height: 560px;
-    object-fit: cover;
-    border-radius: 30px;
-    border: 8px solid rgba(255,255,255,.9);
-    box-shadow: 0 30px 70px rgba(0,0,0,.18);
-    transition: transform 0.4s;
-    
-    /* Anti-download security features */
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    pointer-events: none;
-}
-
-.hero-image img:hover {
-    transform: translateY(-8px);
-}
-
 /* NAVBAR */
 .navbar {
     display: flex;
@@ -177,187 +66,45 @@ body {
     color: white;
 }
 
-/* SECTIONS LAYOUT DEFAULTS */
-section {
-    scroll-margin-top: 100px;
-}
-
-.about,
-.journey,
-.skills,
-.experience,
-.beyond,
-.contact {
+/* HERO SECTION */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     padding: 80px 10%;
+    gap: 100px;
 }
 
-/* ABOUT */
-.about-container {
-    max-width: 800px;
-    margin-left: 0; /* Aligned left */
+.hero-text {
+    flex: 1;
 }
 
-.about h2 {
-    font-size: 52px;
-    margin-bottom: 25px;
-    color: #222;
-}
-
-.about p {
-    font-size: 22px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    text-align: justify;
-    color: #555;
-}
-
-/* JOURNEY */
-.journey-container {
-    max-width: 900px;
-    margin-left: 0; /* Aligned left */
-}
-
-.journey h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.journey-intro {
+.hero-text h3 {
     font-size: 24px;
-    color: #666;
-    margin-bottom: 50px;
-    line-height: 1.6;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #4a6fa5;
+    margin-bottom: 10px;
+    font-weight: 700;
 }
 
-.journey-box {
-    background: rgba(255,255,255,.75);
-    backdrop-filter: blur(15px);
-    padding: 40px;
-    border-radius: 25px;
-    margin-bottom: 35px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
-}
-
-.journey-box h3 {
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: #234a8b;
-}
-
-.journey-box p {
-    font-size: 21px;
-    line-height: 1.9;
-    color: #555;
-}
-
-/* SKILLS */
-.skills-container {
-    max-width: 1100px;
-    margin-left: 0; /* Aligned left */
-}
-
-.skills h2 {
-    font-size: 52px;
-    margin-bottom: 20px;
-}
-
-.skills-intro {
-    font-size: 22px;
-    line-height: 1.8;
-    margin-bottom: 50px;
-    color: #555;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-
-.skill-box {
-    background: rgba(255,255,255,.8);
-    backdrop-filter: blur(15px);
-    padding: 35px;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
-}
-
-.skill-box h3 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #234a8b;
-}
-
-.skill-box ul {
-    list-style: none;
-}
-
-.skill-box li {
-    font-size: 20px;
+.hero-text h1 {
+    font-size: 64px;
+    font-weight: 700;
     margin-bottom: 12px;
-    color: #555;
+    line-height: 1.05;
 }
 
-/* EXPERIENCE */
-.experience-container {
-    max-width: 1000px;
-    margin-left: 0; /* Aligned left */
-}
-
-.experience h2 {
-    font-size: 52px;
-    margin-bottom: 20px;
-}
-
-.experience-intro {
-    font-size: 22px;
-    line-height: 1.8;
-    margin-bottom: 50px;
-    color: #555;
-}
-
-.experience-box {
-    background: rgba(255,255,255,.8);
-    backdrop-filter: blur(15px);
-    padding: 40px;
-    border-radius: 25px;
-    margin-bottom: 35px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
-    transition: .3s;
-}
-
-.experience-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0,0,0,.12);
-}
-
-.experience-box h3 {
-    font-size: 32px;
+.hero-text h2 {
+    font-size: 30px;
+    font-weight: 400;
     margin-bottom: 10px;
-    color: #234a8b;
 }
 
-.experience-box h4 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    font-weight: 500;
-    color: #444;
-}
-
-.experience-box p {
+.hero-text p {
     font-size: 20px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-.experience-box ul {
-    padding-left: 25px;
-}
-
-.experience-box li {
-    font-size: 19px;
-    margin-bottom: 10px;
+    margin-top: 25px;
     color: #555;
 }
 
@@ -398,31 +145,158 @@ section {
     color: white;
 }
 
-/* BEYOND WORK */
-.beyond-container {
-    max-width: 1000px;
-    margin-left: 0; /* Aligned left */
+/* JOURNEY CARD */
+.journey-card {
+    margin-top: 50px;
+    background: rgba(255,255,255,.8);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    max-width: 380px;
 }
 
-.beyond h2 {
-    font-size: 48px;
+.journey-card h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #4a6fa5;
     margin-bottom: 20px;
 }
 
-.beyond-intro {
-    font-size: 22px;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 50px;
-    max-width: 800px;
+.journey-card h2 {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #222;
 }
 
-.beyond-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+.journey-card p {
+    font-size: 18px;
+    color: #666;
+    font-style: italic;
 }
 
+.journey-card:hover {
+    transform: translateY(-5px);
+    transition: .4s;
+    box-shadow: 0 20px 40px rgba(0,0,0,.12);
+}
+
+/* HERO IMAGE RIGHT SIDE */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 450px;
+    height: 560px;
+    object-fit: cover;
+    border-radius: 30px;
+    border: 8px solid rgba(255,255,255,.9);
+    box-shadow: 0 30px 70px rgba(0,0,0,.18);
+    transition: transform 0.4s;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.hero-image img:hover {
+    transform: translateY(-8px);
+}
+
+/* LAYOUT CONFIGS FOR ALL SECTIONS */
+section {
+    scroll-margin-top: 100px;
+}
+
+.about,
+.journey,
+.skills,
+.experience,
+.beyond,
+.contact {
+    padding: 80px 10%;
+}
+
+.about-container,
+.journey-container,
+.skills-container,
+.experience-container,
+.beyond-container,
+.contact-container {
+    width: 100%;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+/* ABOUT CONTENT */
+.about-container { max-width: 800px; }
+.about h2 { font-size: 52px; margin-bottom: 25px; color: #222; }
+.about p { font-size: 22px; line-height: 1.8; margin-bottom: 20px; color: #555; }
+
+/* JOURNEY CONTENT */
+.journey-container { max-width: 900px; }
+.journey h2 { font-size: 48px; margin-bottom: 20px; }
+.journey-intro { font-size: 24px; color: #666; margin-bottom: 50px; line-height: 1.6; }
+.journey-box {
+    background: rgba(255,255,255,.75);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 25px;
+    margin-bottom: 35px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+.journey-box h3 { font-size: 30px; margin-bottom: 20px; color: #234a8b; }
+.journey-box p { font-size: 21px; line-height: 1.9; color: #555; }
+
+/* SKILLS CONTENT */
+.skills-container { max-width: 1100px; }
+.skills h2 { font-size: 52px; margin-bottom: 20px; }
+.skills-intro { font-size: 22px; line-height: 1.8; margin-bottom: 50px; color: #555; }
+.skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.skill-box {
+    background: rgba(255,255,255,.8);
+    backdrop-filter: blur(15px);
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+.skill-box h3 { font-size: 28px; margin-bottom: 20px; color: #234a8b; }
+.skill-box ul { list-style: none; }
+.skill-box li { font-size: 20px; margin-bottom: 12px; color: #555; }
+
+/* EXPERIENCE CONTENT */
+.experience-container { max-width: 1000px; }
+.experience h2 { font-size: 52px; margin-bottom: 20px; }
+.experience-intro { font-size: 22px; line-height: 1.8; margin-bottom: 50px; color: #555; }
+.experience-box {
+    background: rgba(255,255,255,.8);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 25px;
+    margin-bottom: 35px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    transition: .3s;
+}
+.experience-box:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,.12); }
+.experience-box h3 { font-size: 32px; margin-bottom: 10px; color: #234a8b; }
+.experience-box h4 { font-size: 24px; margin-bottom: 20px; font-weight: 500; color: #444; }
+.experience-box p { font-size: 20px; line-height: 1.8; margin-bottom: 20px; color: #555; }
+.experience-box ul { padding-left: 25px; }
+.experience-box li { font-size: 19px; margin-bottom: 10px; color: #555; }
+
+/* BEYOND WORK CONTENT */
+.beyond-container { max-width: 1000px; }
+.beyond h2 { font-size: 48px; margin-bottom: 20px; }
+.beyond-intro { font-size: 22px; line-height: 1.8; color: #555; margin-bottom: 50px; max-width: 800px; }
+.beyond-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
 .beyond-card {
     background: rgba(255,255,255,.8);
     backdrop-filter: blur(15px);
@@ -431,72 +305,19 @@ section {
     box-shadow: 0 10px 30px rgba(0,0,0,.08);
     transition: .3s;
 }
+.beyond-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,.12); }
+.beyond-card h3 { font-size: 28px; margin-bottom: 20px; color: #234a8b; }
+.beyond-card p { font-size: 20px; line-height: 1.8; color: #555; }
 
-.beyond-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0,0,0,.12);
-}
-
-.beyond-card h3 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #234a8b;
-}
-
-.beyond-card p {
-    font-size: 20px;
-    line-height: 1.8;
-    color: #555;
-}
-
-/* CONTACT */
-.contact-container {
-    max-width: 900px;
-    margin-left: 0; /* Aligned left */
-}
-
-.contact h2 {
-    font-size: 52px;
-    margin-bottom: 20px;
-}
-
-.contact-intro {
-    font-size: 22px;
-    line-height: 1.8;
-    margin-bottom: 50px;
-    color: #555;
-}
-
-.contact-card {
-    background: rgba(255,255,255,.8);
-    padding: 30px;
-    border-radius: 20px;
-    margin-bottom: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
-}
-
-.contact-card h3 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #234a8b;
-}
-
-.contact-card p {
-    font-size: 20px;
-    color: #555;
-}
-
-.contact-card a {
-    text-decoration: none;
-    color: #234a8b;
-    font-weight: 600;
-    transition: .3s;
-}
-
-.contact-card a:hover {
-    color: #4a6fa5;
-    text-decoration: underline;
-}
+/* CONTACT CONTENT */
+.contact-container { max-width: 900px; }
+.contact h2 { font-size: 52px; margin-bottom: 20px; }
+.contact-intro { font-size: 22px; line-height: 1.8; margin-bottom: 50px; color: #555; }
+.contact-card { background: rgba(255,255,255,.8); padding: 30px; border-radius: 20px; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+.contact-card h3 { font-size: 28px; margin-bottom: 15px; color: #234a8b; }
+.contact-card p { font-size: 20px; color: #555; }
+.contact-card a { text-decoration: none; color: #234a8b; font-weight: 600; transition: .3s; }
+.contact-card a:hover { color: #4a6fa5; text-decoration: underline; }
 
 /* HTML GLOBAL */
 html {

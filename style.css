@@ -224,8 +224,6 @@ font-size:24px;
 
 font-weight:700;
 
-color:#234a8b;
-
 }
 
 .logo a{
@@ -233,6 +231,14 @@ color:#234a8b;
 text-decoration:none;
 
 color:#234a8b;
+
+transition:.3s;
+
+}
+
+.logo a:hover{
+
+color:#000;
 
 }
 

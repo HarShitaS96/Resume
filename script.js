@@ -1,33 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
     
     // 1. DYNAMIC EXPERIENCE COUNTER LOGIC
-    const experienceElement = document.getElementById("experience");
-    
-    if (experienceElement) {
-        // FIXED: String format prevents strict browser errors and fixes indexing issues
-        const startDate = new Date("2019-10-14"); 
-        const today = new Date();
+    // Using an absolute string literal locks down the correct start window calculations cleanly
+    const startDate = new Date("2019-10-14"); 
+    const today = new Date();
 
-        let years = today.getFullYear() - startDate.getFullYear();
-        let months = today.getMonth() - startDate.getMonth();
-        let days = today.getDate() - startDate.getDate();
+    let years = today.getFullYear() - startDate.getFullYear();
+    let months = today.getMonth() - startDate.getMonth();
+    let days = today.getDate() - startDate.getDate();
 
-        if (days < 0) {
-            months--;
-            const previousMonth = new Date(
-                today.getFullYear(),
-                today.getMonth(),
-                0
-            );
-            days += previousMonth.getDate();
-        }
+    if (days < 0) {
+        months--;
+        const previousMonth = new Date(
+            today.getFullYear(),
+            today.getMonth(),
+            0
+        );
+        days += previousMonth.getDate();
+    }
 
-        if (months < 0) {
-            years--;
-            months += 12;
-        }
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
 
-        experienceElement.innerHTML = 
+    // Targets the display value inside your hero journey element block smoothly
+    const experienceTextElement = document.querySelector(".journey-card h2");
+    if (experienceTextElement) {
+        experienceTextElement.innerHTML = 
             years + " Years " + 
             months + " Months " + 
             days + " Days";
@@ -39,9 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const observerOptions = {
         root: null,
-        // FIXED: High-sensitivity margin layout triggers perfectly across mobile phones
-        rootMargin: "-10% 0px -40% 0px", 
-        threshold: 0.05
+        rootMargin: "-25% 0px -45% 0px", // Perfect triggering window for both standard monitors and smartphones
+        threshold: 0.1
     };
 
     const observer = new Intersection Observer((entries) => {
@@ -49,18 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
             if (entry.isIntersecting) {
                 const currentId = entry.target.getAttribute("id");
                 
-                // Debug tool: Right-click page -> Inspect -> Console to see this running live!
-                console.log("Currently reading section:", currentId);
-                
                 navLinks.forEach((link) => {
                     const href = link.getAttribute("href").replace("#", "");
                     
-                    // Smart match check: matches exact ID or handles variations like "experience-section" vs "experience"
-                    if (href === currentId || 
-                        (currentId === "experience-section" && href === "experience") ||
-                        (currentId === "experience" && href === "experience-section") ||
-                        (currentId === "home" && href === "") ) {
-                        
+                    if (href === currentId) {
                         link.classList.add("active");
                     } else {
                         link.classList.remove("active");

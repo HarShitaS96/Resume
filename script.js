@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const experienceElement = document.getElementById("experience");
     
     if (experienceElement) {
-        const startDate = new Date(2019, 09 , 7);
+        // FIXED: String format prevents strict browser errors and fixes indexing issues
+        const startDate = new Date("2019-10-14"); 
         const today = new Date();
 
         let years = today.getFullYear() - startDate.getFullYear();
@@ -38,9 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const observerOptions = {
         root: null,
-        // Adjusted margins to trigger exactly when the heading/content hits the top 40% of the viewport
-        rootMargin: "-20% 0px -50% 0px", 
-        threshold: 0.1
+        // FIXED: High-sensitivity margin layout triggers perfectly across mobile phones
+        rootMargin: "-10% 0px -40% 0px", 
+        threshold: 0.05
     };
 
     const observer = new Intersection Observer((entries) => {

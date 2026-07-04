@@ -1,9 +1,6 @@
-console.log("script loaded");
-document.addEventListener("DOMContentLoaded", () => {
-    
-    // 1. DYNAMIC EXPERIENCE COUNTER LOGIC
-    // Using an absolute string literal locks down the correct start window calculations cleanly
-    const startDate = new Date("2019-10-14"); 
+document.addEventListener("DOMContentLoaded", function () {
+
+    const startDate = new Date(2019, 9, 14);
     const today = new Date();
 
     let years = today.getFullYear() - startDate.getFullYear();
@@ -12,12 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (days < 0) {
         months--;
-        const previousMonth = new Date(
-            today.getFullYear(),
-            today.getMonth(),
-            0
-        );
-        days += previousMonth.getDate();
+        days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
     }
 
     if (months < 0) {
@@ -25,41 +17,31 @@ document.addEventListener("DOMContentLoaded", () => {
         months += 12;
     }
 
-    // Targets the display value inside your hero journey element block smoothly
-    //const experienceTextElement = document.querySelector(".journey-card h2");
-    const experienceTextElement = document.getElementById("experience-counter");
-    if (experienceTextElement) {
-        experienceTextElement.textContent =
-            '${years} Years ${months} Months ${days} Days';       
-    }
+    document.getElementById("experience-counter").textContent =
+        `${years} Years ${months} Months ${days} Days`;
 
-    // 2. SCROLL HIGHLIGHT / ACTIVE MENU LOGIC
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".navbar ul li a");
 
-    const observerOptions = {
-        root: null,
-        rootMargin: "-25% 0px -45% 0px", // Perfect triggering window for both standard monitors and smartphones
-        threshold: 0.1
-    };
-
-    const observer = new Intersection Observer((entries) => {
-        entries.forEach((entry) => {
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
             if (entry.isIntersecting) {
-                const currentId = entry.target.getAttribute("id");
-                
-                navLinks.forEach((link) => {
-                    const href = link.getAttribute("href").replace("#", "");
-                    
-                    if (href === currentId) {
-                        link.classList.add("active");
-                    } else {
-                        link.classList.remove("active");
-                    }
+                const id = entry.target.id;
+
+                navLinks.forEach(function(link) {
+                    link.classList.toggle(
+                        "active",
+                        link.getAttribute("href") === "#" + id
+                    );
                 });
             }
         });
-    }, observerOptions);
+    }, {
+        threshold: 0.3
+    });
 
-    sections.forEach((section) => observer.observe(section));
+    sections.forEach(function(section) {
+        observer.observe(section);
+    });
+
 });

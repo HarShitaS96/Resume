@@ -26,12 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Targets the display value inside your hero journey element block smoothly
-    const experienceTextElement = document.querySelector(".journey-card h2");
+    //const experienceTextElement = document.querySelector(".journey-card h2");
+    const experienceTextElement = document.getElementById("experience-counter");
     if (experienceTextElement) {
-        experienceTextElement.innerHTML = 
-            years + " Years " + 
-            months + " Months " + 
-            days + " Days";
+        experienceTextElement.textContent =
+            '${years} Years ${months} Months ${days} Days';       
     }
 
     // 2. SCROLL HIGHLIGHT / ACTIVE MENU LOGIC

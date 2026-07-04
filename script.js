@@ -1,3 +1,4 @@
+console.log("script loaded");
 document.addEventListener("DOMContentLoaded", () => {
     
     // 1. DYNAMIC EXPERIENCE COUNTER LOGIC

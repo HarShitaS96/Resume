@@ -342,7 +342,7 @@ html {
 @media (max-width: 768px) {
     /* Global Container Padding Scales */
     .about, .journey, .skills, .experience, .beyond, .contact {
-        padding: 60px 6%;
+        padding: 35px 6%;
     }
     
     /* Navbar Dropdown Reset to Standard Flow */

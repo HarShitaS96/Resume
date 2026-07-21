@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const startDate = new Date(2019, 09 , 07);
+    const startDate = new Date(2019,9,7);
     const today = new Date();
 
     let years = today.getFullYear() - startDate.getFullYear();
